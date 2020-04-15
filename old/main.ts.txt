@@ -8,9 +8,9 @@ function delay(ms: number) {
 async function connect(): Promise<TradfriClient> {
 	const gateway = await discoverGateway();
 	const tradfri = new TradfriClient(gateway.name);
-	// const { identity, psk } = await tradfri.authenticate('dfYSOrhQpnLIOSEz');
+	// const { identity, psk } = await tradfri.authenticate('token');
 	// console.log({ identity, psk });
-	await tradfri.connect('tradfri_1582987903724', 'Quj777Nmn9ar0Ivc');
+	await tradfri.connect('identity', 'psk');
 
 	return tradfri;
 }
